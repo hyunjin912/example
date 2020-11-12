@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>img_srcset</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <img
+        srcset="images/heropy_small.png 400w,
+                images/heropy_medium.png 700w,
+                images/heropy_large.png 1000w"
+        src="images/heropy.png"
+        alt="HEROPY" />
+
+    <!-- 
+        sizes="500px" 속성은 단위 필수
+        이미지는 사이즈를 늘리는 것보다 줄이는게 좋으며 모두가 그렇게 해왔음. 늘리면 이미지 깨짐 현상 발생.
+        따라서 500px로 줄이기 위한 이미지는 미디엄.png와 라지png인데,
+
+        700px(원본 이미지의 값) - 500px(size속성의 속성 값) = 200px(줄여야 하는 값)
+
+        1000px(원본 이미지의 값) - 500px(size속성의 속성 값) = 500px(줄여야 하는 값)
+        
+        상대적으로 조금만 줄여도 되는 미디엄.png가 최적화된 이미지이므로, 브라우저의 너비가 뭐가 됐든 미디엄.png로 500px적용하여 랜더링  
+        
+        
+        width="500px" 속성은 단위 필수아님
+        브라우저 너비가 
+        400이하일 경우 -> 스몰.png로 500px적용하여 랜더링
+        700이하일 경우 -> 미디엄.png로 500px적용하여 랜더링
+        701이상일 경우 -> 라지.png로 500px적용하여 랜더링
+        
+
+        둘다 같이 사용할 경우, sizes속성이 적용
+     -->
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        article {
+            text-align: justify;
+            word-break: break-all;
+        }
+        .picture {
+            width: 200px; height: 200px;
+            background: dodgerblue;
+            float: left;
+        }
+        .clear {
+            /* clear: left; */
+        }
+        .picture2 {
+            width: 200px; height: 200px;
+            background: pink;
+            float: left;
+        }
+        .clear2 {
+            clear: left;
+        }
+        mark {
+            font-weight: bold;
+            color: #fff;
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <div class="picture"></div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur in natus perspiciatis fugit molestias ipsa. Non veritatis laboriosam debitis molestias at a consequuntur esse, facere molestiae voluptatum modi culpa itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, et fugiat voluptatum delectus minima eaque repellendus quidem fugit quis dolores eligendi iste laudantium ipsam, enim vitae explicabo sunt perspiciatis modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repudiandae quibusdam sequi! Ratione veniam necessitatibus quae explicabo labore reiciendis delectus soluta adipisci possimus? Praesentium, maxime repellendus. In adipisci ullam laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam praesentium fugiat quas sequi.
+        </p>
+        <div class="clear">
+            Dolorum corrupti necessitatibus ipsa iste veniam amet optio nemo dolor, ex quasi rerum odio earum temporibus quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fuga, necessitatibus possimus repellendus explicabo consequuntur numquam saepe rerum autem eaque, quasi omnis ea veniam mollitia totam quo, dignissimos iusto neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis cupiditate amet consequuntur aliquam fuga eveniet in possimus dicta voluptate, molestias blanditiis ratione tenetur, ullam voluptatum! Id eligendi perspiciatis ab maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ab qui! Ut, necessitatibus. Nobis sed et quia ratione nulla, dolore maiores quas quod fugit aperiam atque vel molestiae, cum libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis inventore cumque debitis aut placeat. Expedita soluta ipsum nisi adipisci blanditiis recusandae temporibus illum dolore ut, doloremque odit quibusdam enim sint.
+        </div>
+    </article>
+    <hr>
+    <article>
+        <div class="picture2"></div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur in natus perspiciatis fugit molestias ipsa. Non veritatis laboriosam debitis molestias at a consequuntur esse, facere molestiae voluptatum modi culpa itaque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, et fugiat voluptatum delectus minima eaque repellendus quidem fugit quis dolores eligendi iste laudantium ipsam, enim vitae explicabo sunt perspiciatis modi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti repudiandae quibusdam sequi! Ratione veniam necessitatibus quae explicabo labore reiciendis delectus soluta adipisci possimus? Praesentium, maxime repellendus. In adipisci ullam laborum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam praesentium fugiat quas sequi.
+        </p>
+        <div class="clear2">
+            Dolorum corrupti necessitatibus ipsa iste veniam amet optio nemo dolor, ex quasi rerum odio earum temporibus quis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fuga, necessitatibus possimus repellendus explicabo consequuntur numquam saepe rerum autem eaque, quasi omnis ea veniam mollitia totam quo, dignissimos iusto neque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis cupiditate amet consequuntur aliquam fuga eveniet in possimus dicta voluptate, molestias blanditiis ratione tenetur, ullam voluptatum! Id eligendi perspiciatis ab maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, ab qui! Ut, necessitatibus. Nobis sed et quia ratione nulla, dolore maiores quas quod fugit aperiam atque vel molestiae, cum libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis inventore cumque debitis aut placeat. Expedita soluta ipsum nisi adipisci blanditiis recusandae temporibus illum dolore ut, doloremque odit quibusdam enim sint.
+        </div>
+        <p>
+            <mark>흐르는 것을 막고 정상적으로 돌아가고 싶은 요소에 clear속성을 적용한다<br>
+            clear의 값으로는 float의 값과 같다</mark>
+        </p>
+    </article>
+
+    <h2>float 해제</h2>
+    <ol>
+        <li>
+            다음 형제요소에 <code><mark>&nbsp;clear: left, right, both&nbsp;</mark></code> 추가하여 해제
+        </li>
+        <li>
+            부모요소에 <code><mark>&nbsp;overflow: hidden, auto&nbsp;</mark></code> 추가하여 해제 
+        </li>
+        <li>
+            부모요소에 <code><mark>&nbsp;clearfix&nbsp;</mark></code> 클래스 추가하여 해제
+        </li>
+    </ol>
+</body>
+</html>

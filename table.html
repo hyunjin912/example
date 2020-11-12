@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 10px;
+            /* 
+            이 속성은 table태그에만 적용된다.(td,th 적용 x)
+            */
+        }
+        td, th {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>개인 정보</caption>
+        <colgroup>
+            <col>
+            <col style="background-color: orange;" span="2">
+            <!-- <col> -->
+            <!-- span속성을 사용했기에 col태그가 없어도 된다. -->
+        </colgroup>
+        <tr>
+            <th id="th-name" scope="col">이름</th>
+            <th id="th-age" scope="col">나이</th>
+            <th id="th-weight" scope="col">무게</th>
+        </tr>
+        <tr>
+            <td headers="th-name">이현진</td>
+            <td headers="th-age">20</td>
+            <td headers="th-weight">50</td>
+        </tr>
+        <tr>
+            <td headers="th-name">이현진</td>
+            <td headers="th-age">20</td>
+            <td headers="th-weight">50</td>
+        </tr>
+    </table>
+    <!-- 
+        caption태그는 table의 제목을 나타내므로 항상 table태그 바로 아래에 작성해야 한다.
+
+        scope속성은 표의 카테고리(주제, 머리글)에만 사용한다.
+        -값-
+        col: 그 열의 카테고리라는 뜻
+        colgroup: 모든 열의 카테고리라는 뜻
+        row : 그 행의 카테고리라는 뜻
+        rowgroup 모든 행의 카테고리라는 뜻
+
+        headers속성은 표의 내용에만 사용한다.(scope속성과 반대)
+        카테고리에 반드시 id속성이 있어야하며 headers의 속성 값으로는 id속성의 값을 적어야 한다.
+        즉, headers속성은 카테고리에 대한 내용이라는 뜻을 나타낸다.
+     -->
+</body>
+</html>

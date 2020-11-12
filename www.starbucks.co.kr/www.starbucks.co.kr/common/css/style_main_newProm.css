@@ -1,0 +1,225 @@
+@charset 'utf-8';
+
+span.blind {position:absolute; width:1px; height:1px; margin:-1px; overflow:hidden; clip:rect(0 0 0 0);}
+
+/***************************************************************** s::20200702 main_floating ************************************************************/
+/********************************************************************************************************************************************************/ 
+.layer_floating {position:fixed; top:138px; left:54.5%; width:140px; height:252px; margin-left:485px; z-index:999;} /* 20200923 ìˆ˜ì • */
+.layer_floating a {display:block; width:100%; height:100%;}
+.layer_floating img {display:block; width:100%;}
+.layer_floating .mobile-badge {display:none;}
+
+	@media all and (max-width:1400px) {
+		.layer_floating {left:auto; right:1%; width:auto; height:auto;}
+	}
+	@media all and (max-width:960px) {
+		.layer_floating {top:85px; width:14%;}
+		.layer_floating .pc-badge {display:none;}
+		.layer_floating .mobile-badge {display:block;}
+	}
+	@media all and (max-width:740px) {
+		.layer_floating {top:95px; width:16.5%;}
+	}
+	
+	@media all and (max-width:640px) {
+		.layer_floating {top:92px; width:25.7%; right:1.8%;}
+	}
+/***************************************************************** e::20200702 main_floating ************************************************************/
+/********************************************************************************************************************************************************/
+
+
+/***************************************************************** s::20201023 main_visual **************************************************************/
+/********************************************************************************************************************************************************/
+#topWrap {height:100% !important;}
+.main-visual_wrap {height:646px; background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/2020_xams_bg_1.jpg); background-position:center; background-repeat:no-repeat; background-size:cover;}
+.main-visual_inner {box-sizing:border-box; position:relative; max-width:1080px; height:100%; margin:0 auto; padding-top:70px;}
+
+.btn_slogan ,
+.set_common {position:absolute; opacity:0;}
+
+.main-visual_slogan {width:34%; max-width:363px; opacity:0;}
+.m-slogan {display:none;}
+
+.set_common img {width:100%;}
+.set_common:after {content:""; position:absolute; height:100%; max-height:98px; background-repeat:no-repeat; background-size:100%;}
+
+.set_01 {bottom:12.5%; left:26%; width:29%; max-width:308px;}
+.set_02 {bottom:20%; left:39.7%; width:25%; max-width:263px;}
+.set_03 {bottom:15%; left:55.7%; width:26%; max-width:281px; z-index:1;}
+.set_04 {bottom:32%; left:69%; width:26%; max-width:275px;}
+.set_05 {bottom:20%; left:78.5%; width:26%; max-width:294px;}
+
+.set_01:after {top:98%; left:0; width:60%; max-width:184px; background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/2020_xmas_latte_tit_1.png);}
+.set_02:after {top:-27%; left:-12%; width:88%; max-width:230px; background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/2020_xmas_popcorn_tit_1.png);}
+.set_03:after {top:103%; left:-7%; width:80%; max-width:223px; background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/2020_xmas_relaxer_tit_1.png);}
+.set_04:after {top:2%; left:51%; width:67%; max-width:183px; background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/2020_xmas_blended_tit.png);}
+.set_05:after {top:90%; left:1%; width:66%; max-width:183px; background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/2020_xmas_chocolate_tit_1.png);}
+
+.m-drink {display:none;}
+
+.btn_slogan {box-sizing:border-box; top:auto; left:10.5%; width:125px; height:38px; line-height:34px; margin-top:40px; text-align:center; font-size:15px;  border:2px solid #fff; border-radius:3px; z-index:5;}
+.btn_slogan a {display:block; width:100%; height:100%; color:#fff; transition:background-color .5s; -webkit-transition:background-color .5s;}
+.btn_slogan a:hover {background-color:#006e3f;}
+
+/* media queries pc */
+@media screen and (max-width:1130px) {
+	.main-visual_inner {padding-top:5%;}
+	.main-visual_slogan {margin-left:20px;}
+	.btn_slogan {left:12.5%;}
+}
+@media screen and (max-width:960px) {
+	.main-visual_wrap {height:566px;}
+	.pc-slogan {width:320px;}
+	.btn_slogan {width:110px; margin-top:20px;}
+}
+
+/* media queries mobile */
+@media screen and (max-width:640px) {
+	.main-visual_wrap {height:346vw; background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/m_2020_xams_bg_1.jpg);}
+	.main-visual_inner {padding-top:calc(21% - 10px);} /* 20201028 ìˆ˜ì • */
+	
+	.main-visual_slogan {width:61%; margin-left:6%;}
+	.pc-slogan {display:none;}
+	.m-slogan {display:block;}
+	
+	.set_common,
+	.set_common:after {max-width:none;}
+	
+	.set_common {bottom:auto;}
+	.set_01 {top:17%; left:11%; width:64.07%;}
+	.set_02 {top:20%; left:53%; width:54.7%;}
+	.set_03 {top:48%; left:10%; width:58.44%;}
+	.set_04 {top:65%; left:52%; width:57.35%;}
+	.set_05 {top:75%; left:23%; width:60.63%;}	
+	
+	.set_01:after {background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/m_2020_xmas_latte_tit_1.png);}
+	.set_02:after {top:102%; left:-13.5%; background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/m_2020_xmas_popcorn_tit_1.png);}
+	.set_03:after {top:41%; left:80%; width:50%; background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/m_2020_xmas_relaxer_tit_1.png);}
+	.set_04:after {top:12%; left:-70%; background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/m_2020_xmas_blended_tit_1.png);}
+	.set_05:after {top:93%; left:-0.6%; background-image:url(https://image.istarbucks.co.kr/upload/common/img/main/2020/m_2020_xmas_chocolate_tit_1.png);}
+	
+	.pc-drink {display:none;}
+	.m-drink {display:block;}
+	
+	.btn_slogan {position:absolute; bottom:3%; left:50%; width:115px; height:34px; line-height:32px; margin-left:-57.5px; font-size:13px;}
+}
+/***************************************************************** e::20201023 main_visual **************************************************************/
+/********************************************************************************************************************************************************/
+
+
+/***************************************************************** s::20201023 main_Bean ***************************************************************/
+/********************************************************************************************************************************************************/
+#main-bean_wrap {height:573px; background-image:url('https://image.istarbucks.co.kr/upload/common/img/main/2020/2020_xmas_bean_bg.jpg'); background-color:#f8ccd7; background-position:center; background-repeat:no-repeat; background-size:cover; overflow:hidden;}
+.main-bean_inner {position:relative; max-width:1080px; height:573px; margin:0 auto;}
+
+.bean_img_box,
+.bean_txt_box {position:absolute;}
+
+.bean_img_box img,
+.bean_txt_box img {width:100%;}
+
+.bean_img_box {top:12.22%; left:-3.5%;}
+.bean_txt_box {top:30.73%; right:12%;}
+
+.pc-bean {max-width:519px;}
+.pc-bean-txt {max-width:425px;}
+
+.m-bean,
+.m-bean-txt {display:none;}
+
+.btn_bean_detail {width:121px; height:34px; line-height:34px; margin:50px 2px 0 0; text-align:center; font-size:14px; z-index:6;}
+.btn_bean_detail a {display:block; width:100%; height:100%; color:#555; border:2px solid #555; border-radius:3px; transition:background-color .7s, color .7s; -webkit-transition:background-color .7s, color .7s;}
+.btn_bean_detail a:hover {background-color:#000; border-color:#000; color:#fff;}
+
+@media all and (max-width:1100px) {
+	.bean_img_box {left:1% !important; width:50%;}
+	.bean_txt_box {right:7.5% !important; width:41%;}
+}
+@media all and (max-width:960px) {
+	#main-bean_wrap {height:67vw;}
+}
+
+@media all and (max-width:640px) {
+	#main-bean_wrap {height:165vw; background-image:url('https://image.istarbucks.co.kr/upload/common/img/main/2020/m_2020_xmas_bean_bg.jpg');}
+	
+	.bean_img_box,
+	.bean_txt_box {position:relative; right:0 !important; left:0 !important; width:80%; margin-right:auto; margin-left:auto;}
+	
+	.bean_img_box {margin-top:5%;}
+	.bean_txt_box {top:0; margin-top:24%;}
+	
+	.pc-bean,
+	.pc-bean-txt {display:none;}
+	.m-bean,
+	.m-bean-txt {display:block;}
+	
+	.btn_bean_detail {width:230px; height:60px; line-height:58px; margin:12% auto 0; font-size:20px;}
+}
+@media all and (max-width:500px) {
+	.btn_bean_detail {width:121px; height:34px; line-height:32px; margin:5% auto 0; font-size:15px;}
+}
+
+/***************************************************************** e::20201023 main_Bean ****************************************************************/
+/********************************************************************************************************************************************************/	
+
+
+/***************************************************************** s::20201015 main_reserve *************************************************************/
+/********************************************************************************************************************************************************/
+.reserve_wrap {background:#01221b url(https://image.istarbucks.co.kr/upload/common/img/main/2020/reserve_xmas_bg.jpg) center 0 no-repeat; background-size:cover; overflow:hidden}
+
+.reserve_inner {position:relative; max-width:1200px; width:100%; height:100%; margin:0 auto; left:50px}
+.reserve_inner:after {content:""; display:block; clear:both}
+
+.reserve_title img,
+.reserve_visual img {width:100%}
+ 
+.reserve_title {float:left; width:60.3%; max-width:724px; margin-top:11.92%}
+
+.reserve_visual {position:relative; float:right; max-width:471px; width:39.7%; opacity:0}
+.reserve_visual-m {display:none}
+
+.reserve_detail-btn {position:absolute; bottom:24%; left:31.5%; width:126px; height:38px; line-height:34px; text-align:center; font-size:14px}
+.reserve_detail-btn a {box-sizing:border-box; display:block; width:100%; height:100%; border-width:2px; border-style:solid; border-color:#e3b59e; border-radius:4px; color:#e3b59e; transition:background-color .7s, color .7s, border-color .7s; -webkit-transition:background-color .7s, color .7s, border-color .7s}
+.reserve_detail-btn a:hover {border-color:#fbf6d6; color:#fbf6d6; background-color:#011305}
+
+@media screen and (max-width:1120px){
+	.reserve_inner {left:20px}
+	.reserve_visual {left:30px}
+}
+
+@media screen and (max-width:930px){
+	.reserve_inner {left:0}
+	.reserve_title {display:none}
+	
+	.reserve_visual {float:none; left:0; max-width:none; width:100%}
+	.reserve_visual img {max-width:none}
+
+	.reserve_visual-pc {display:none}
+	.reserve_visual-m {display:block}
+	
+	.reserve_detail-btn {bottom:10%; left:50%; width:230px; height:67px; line-height:67px; margin-left:-115px; font-size:22px}
+}
+
+@media screen and (max-width:500px){
+	.reserve_detail-btn {width:125px; height:38px; line-height:34px; margin-left:-62.5px; font-size:15px}
+}
+/***************************************************************** e::20201015 main_reserve *************************************************************/
+/********************************************************************************************************************************************************/
+
+/* 20201026 main_favorite img ì˜ì—­ */
+.fav_img {position:absolute; top:100px; right:-10px; width:672px; height:458px; background:url('https://image.istarbucks.co.kr/upload/common/img/main/2020/2020_christmas1_fav.png') 0 0 no-repeat; background-size:100%; z-index:7;}
+
+@media screen and (max-width:1280px) {
+	.fav_img {top:80px; right:100px; width:612px; height:411px;}
+}
+@media screen and (max-width:960px) {
+	.fav_img {position:static; top:auto; right:auto; margin:130px auto 0;}
+}
+@media screen and (max-width:640px) {
+	.fav_img {width:460px; height:314px;}
+}
+@media screen and (max-width:480px) {
+	.fav_img {width:320px; height:264px; margin:90px auto 0;}
+}
+
+

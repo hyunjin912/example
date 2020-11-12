@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.header {
+    background: yellowgreen;
+}
+.container {
+    width: 980px;
+    background: tomato;
+    margin: 0 auto;
+}
+.logo {
+    float: left;
+}
+.logo img {
+    vertical-align: top;
+    /* display: block; 도 가능 */
+}
+.menu {
+    float: left;
+}
+.menu-item {
+    float: left;
+    padding: 5px 0;
+}

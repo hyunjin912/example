@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <style>
+        form {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="/hello" method="POST">
+        <input type="email" name="email">
+        <input type="password" name="password">
+        <button type="submit">로그인</button>
+        <!-- <input type="submit" value="로그인"> -->
+        <!-- input태그에서 name속성은 서버에 보낼 때 필요한 텍스트를 쓰고 value속성은 웹사이트에서 보여질 텍스트를 쓴다
+
+        option태그에서 value속성은 서버에 보낼 때 필요한 텍스트를 쓴다 -->
+    </form>
+
+    <form action="">
+        <!-- 라벨 가능 요소를 참조 -->
+        <input type="checkbox" id="user-agreement" />
+        <label for="user-agreement">동의하십니까?</label>
+
+        <!-- 라벨 가능 요소를 포함 -->
+        <label><input type="checkbox" />동의하십니까?</label>
+        <!-- label태그는 input태그, button태그, select태그, textarea태그에 사용 가능 -->
+    </form>
+
+    <form action="">
+        <button class="click">클릭하세요!</button>
+    </form>
+    <script>
+        let a = document.querySelector(".click");
+        a.addEventListener("click", function(){
+            alert("클릭 감사합니다.")
+        });
+    </script>
+
+    <form>
+        <fieldset>
+            <legend>Coffee Size</legend>
+            <label>
+                <input type="radio" name="size" value="tall" />
+                Tall
+            </label>
+            <label>
+                <input type="radio" name="size" value="grande" />
+                Grande
+            </label>
+            <label>
+                <input type="radio" name="size" value="venti" />
+                Venti
+            </label>
+        </fieldset>
+        <!-- 같은 맥락의 radio이면 name이 전부 같아야 한다. -->
+    </form>
+    <p style>같은 목적의 양식을 그룹화(&lt;fieldset&gt;)하여 제목(&lt;legend&gt;)을 지정</p>
+
+    <select>
+        <optgroup label="Coffee">
+          <option>Americano</option>
+          <option>Caffe Mocha</option>
+          <option label="Cappuccino" value="Cappuccino"></option>
+          <!-- 
+              label속성은 웹사이트에 보여질 텍스트를 쓰고
+              value속성은 서버에 보낼 텍스트를 쓴다
+
+              두 속성을 사용안하고 option태그 안에 텍스트를 쓰면 이 텍스트가 label속성과 value속성의 기능을 동시에 한다.
+           -->
+        </optgroup>
+        <optgroup label="Latte" disabled>
+          <option>Caffe Latte</option>
+          <option>Vanilla Latte</option>
+        </optgroup>
+    </select>
+
+    <div>
+        <progress value="0" max="100"></progress>
+    </div>
+    <script>
+        const progress = document.querySelector("progress");
+        const interval = setInterval(function(){
+            progress.value += 1;
+            if(progress.value >= 100){
+                clearInterval(interval);
+            }
+        }, 10)
+    </script>
+    
+</body>
+</html>
