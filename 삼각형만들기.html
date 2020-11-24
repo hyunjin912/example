@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        body {
+            padding: 50px;
+        }
+        ul {
+            display: flex;
+            font-size: 20px;
+            border: 1px solid dodgerblue;
+        }
+        ul li {
+            flex: 1;
+            text-align: center;
+        }
+        ul li ~ li {
+            border-left: 1px solid dodgerblue;
+        }
+        ul li button {
+            width: 100%; height: 40px; border: 0;
+            position: relative;
+        }
+        ul li button::before {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 5px;
+            border-style: solid;
+            border-color: dodgerblue transparent transparent transparent;
+                            /* 위           오른        아래        왼 */
+        }
+        ul li.on button::before {
+            content: "";
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            width: 10px; height: 10px;
+            transform: translateX(-50%) rotate(45deg);
+            border: 1px solid red;
+            border-top: none;
+            border-left: none;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>첫번 째 방법 : 채워진 삼각형</h2>
+    <ul>
+        <li><button>메뉴1</button></li>
+        <li><button>메뉴2</button></li>
+        <li><button>메뉴3</button></li>
+    </ul>
+    <h2 style="margin-top: 30px">두번 째 방법 : 빈 삼각형</h2>
+    <ul>
+        <li class="on"><button>메뉴1</button></li>
+        <li class="on"><button>메뉴2</button></li>
+        <li class="on"><button>메뉴3</button></li>
+    </ul>
+</body>
+</html>

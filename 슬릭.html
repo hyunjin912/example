@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        .slide_wrap {
+            width: 800px;
+        }
+        .slide_wrap div {
+            font-size: 20px;
+            color: #fff;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .slide_wrap div ~ div {
+            margin-left: 30px;
+        }
+        .slide_wrap div.one {background: red;}
+        .slide_wrap div.two {background: rgb(255, 123, 0);}
+        .slide_wrap div.three {background: rgb(202, 202, 15);}
+        .slide_wrap div.four {background: blue;}
+        .slide_wrap div.five {background: green;}
+        .slide_wrap div.six {background: gray;}
+        .slide_wrap div.seven {background: purple;}
+        .slide_wrap div.eight {background: pink;}
+    </style>
+    <script>
+        $(function(){
+            $('.slide_wrap').slick({
+                infinite: true,
+                slidesToShow: 4,
+                // 위 갯수에 따라 이미지 너비가 자동 조절된다. wrap과 이미지에 크기를 안줘도 된다. 그래야 반응형이 됨
+                slidesToScroll: 4
+            });
+        });
+    </script>		
+</head>
+<body>
+    <div class="slide_wrap">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+        <div class="five">5</div>
+        <div class="six">6</div>
+        <div class="seven">7</div>
+        <div class="eight">8</div>
+    </div>
+</body>
+</html>
