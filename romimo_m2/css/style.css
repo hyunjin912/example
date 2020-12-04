@@ -96,8 +96,8 @@ select:focus, input:focus {
 }
 .agree_line {
 	text-align: center;
-	margin-top: 20px;
-	margin-bottom: 50px;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 .agree_line a {
 	color: #000;
@@ -115,16 +115,16 @@ select:focus, input:focus {
 	outline: 0;
 }
 .btn1 {
-	background: url("../images/btn1_on.png") center center / cover;
+	background: url("../images/btn1_on.png") no-repeat center center / 100%;
 }
 .btn1.on {
-	background: url("../images/btn1_off.png") center center / cover;
+	background: url("../images/btn1_off.png") no-repeat center / 100%;
 }
 .btn2 {
-	background: url("../images/btn2_off.png") center center / cover;
+	background: url("../images/btn2_off.png") no-repeat center center / 100%;
 }
 .btn2.on {
-	background: url("../images/btn2_on.png") center center / cover;
+	background: url("../images/btn2_on.png") no-repeat center / 100%;
 }
 .view_line {
 	margin-bottom: 21px;
