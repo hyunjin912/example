@@ -112,7 +112,8 @@ select:focus, input:focus {
 }
 .btn {
 	width: 40%;
-	height: 76px;
+	/* height: 76px; */
+	padding-top: 12%;
 	border: 0;
 }
 .btn:focus {
