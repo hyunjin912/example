@@ -103,7 +103,13 @@ select:focus, input:focus {
 	margin-bottom: 5px;
 	font-size: 12px;
 }
-.agree_line a {
+.agree_line > input {
+	vertical-align: middle;
+}
+.agree_line > label {
+	vertical-align: middle;
+}
+.agree_line > a {
 	color: #000;
 	text-decoration: none;
 }
