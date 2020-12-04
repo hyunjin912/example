@@ -89,7 +89,10 @@ select:focus, input:focus {
 	width: 70%;
 }
 .person-tel {
-	width: 22%;
+	width: 18%;
+}
+.wm {
+	width: 28%;	
 }
 .margin_tel {
 	margin: 0 0.5%;
@@ -98,6 +101,7 @@ select:focus, input:focus {
 	text-align: center;
 	margin-top: 10px;
 	margin-bottom: 5px;
+	font-size: 12px;
 }
 .agree_line a {
 	color: #000;
