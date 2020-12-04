@@ -85,6 +85,9 @@ select:focus, input:focus {
 	font-size: 32px;
 	background: #f7c35f;
 }
+.person-name::placeholder {
+	color: red;
+}
 .person-name {
 	width: 70%;
 }
