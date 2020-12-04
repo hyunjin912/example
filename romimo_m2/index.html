@@ -117,7 +117,7 @@
 
 	$(document).ready(function(){
 
-		$(".bt_baro").click(function(event){
+		$(".bt_baro, .view_go").click(function(event){
 			event.preventDefault();
 			$('html, body').animate({scrollTop:$(this.hash).offset().top}, 300);
 		});
@@ -167,7 +167,7 @@
 				</form>
 
 				<div class="view_line">
-					<a href="#" class="view_go"><img src="images/go.png" alt="후기보기"></a>
+					<a href="#view_go" class="view_go"><img src="images/go.png" alt="후기보기"></a>
 				</div>
 				
 				<div class="ex_box">
@@ -180,7 +180,7 @@
 				</div>
 
 				<div class="be_af">
-					<div class="img_tit">
+					<div class="img_tit" id="view_go">
 						<img src="images/before-after.png" alt="">
 					</div>
 					<div class="img_img">
