@@ -127,7 +127,7 @@ select:focus, input:focus {
 	background: url("../images/btn2_on.png") center center / cover;
 }
 .view_line {
-	margin: 21px 0;
+	margin-bottom: 21px;
 }
 .ex_box {
 	background: #a1bef6;
