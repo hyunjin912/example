@@ -143,3 +143,9 @@ select:focus, input:focus {
 .img_tit {
 	margin: 50px 0 35px 0;
 }
+
+@media (max-width: 640px) {
+	.person-name, .person-tel {
+		font-size: 5vw;
+	}
+}
