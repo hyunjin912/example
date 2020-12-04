@@ -117,8 +117,14 @@ select:focus, input:focus {
 .btn1 {
 	background: url("../images/btn1_on.png") center center / cover;
 }
+.btn1.on {
+	background: url("../images/btn1_off.png") center center / cover;
+}
 .btn2 {
 	background: url("../images/btn2_off.png") center center / cover;
+}
+.btn2.on {
+	background: url("../images/btn2_on.png") center center / cover;
 }
 .view_line {
 	margin: 21px 0;
