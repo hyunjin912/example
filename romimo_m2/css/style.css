@@ -84,9 +84,11 @@ select:focus, input:focus {
 .person-name, .person-tel {
 	font-size: 32px;
 	background: #f7c35f;
+	color: #283555;
 }
-.person-name::placeholder {
-	color: red;
+.person-name::placeholder,
+.person-name:-ms-input-placeholder {
+	color: rgba(40,53,85, .4);
 }
 .person-name {
 	width: 70%;
