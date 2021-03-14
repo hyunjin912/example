@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>	
+		
+    <style type="text/css">
+        body,ul,li {margin: 0; padding: 0;}
+        .para {
+            position: absolute;
+            font-size: 90px;
+            font-weight: bold;
+            color: #fff;
+        }
+        .bg_1 .para {
+            top: -59%;
+            color: dodgerblue;
+        }
+        .bg_2 .para {
+            top: -159%;
+            color: orange;
+        }
+        .clip {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            clip: rect(auto, auto, auto, auto);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bg_0 {
+            position: relative;
+            height: 100vh;
+            background-image:url(./img/nitish-meena-99219.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            background-attachment: fixed;
+         }
+        .bg_1 {
+            position: relative;
+            height: 100vh;
+            background-image:url(./img/mahkeo-222765.jpg);
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: cover;
+            background-attachment: fixed;
+         }
+        .bg_2 {
+            position: relative;
+            height: 100vh;
+            background-image:url(./img/nitish-meena-111116.jpg);
+            background-repeat: no-repeat;
+            background-position: bottom center;
+            background-size: cover;
+            background-attachment: fixed;
+         }
+    </style>
+    </head>
+    <body>
+        
+        <div class="fullscreen bg_0">
+            <div class="clip">
+                <div class="para"></div>
+            </div>
+        </div>
+        <div class="fullscreen bg_1">
+            <div class="clip">
+                <div class="para"></div>
+            </div>
+        </div>
+        <div class="fullscreen bg_2">
+            <div class="clip">
+                <div class="para"></div>
+            </div>
+        </div>
+
+        <script>
+            // var idx = 0;
+            // var $screen = document.querySelectorAll(".fullscreen");
+            // var $body = document.body;
+            // $body.dataset.screen = idx;
+
+            // window.addEventListener('scroll', function(){
+            //     var yOffset = window.pageYOffset;
+
+            //     if(yOffset > 0) {
+            //         document.querySelector(".bg_0 .para").style.transform = "translateY("+yOffset+"px)";
+            //         document.querySelector(".bg_1 .para").style.transform = "translateY("+yOffset+"px)";
+            //         document.querySelector(".bg_2 .para").style.transform = "translateY("+yOffset+"px)";
+            //     }
+
+            //     // if( $body.dataset.screen == 0 ){
+            //     //     idx = 1;
+            //     //     window.scroll({
+            //     //     top: 600,
+            //     //     left: 0,
+            //     //     behavior: 'smooth'
+            //     //     });
+            //     // }
+
+            // });
+            
+            
+
+            var idx = 0;
+            $("body").attr("data-screen", idx);
+
+            $("html").on('mousewheel', function(e){
+                // .on메서드를 꼭 써야함
+                var wheel = e.originalEvent.wheelDelta;
+                
+                if( $("body").attr("data-screen") == 0 ) {
+
+                    if(wheel < 0) {
+                    // 스크롤 내려감 
+
+                        idx = 1;
+                        $("body").attr("data-screen", idx);
+                        $("html").animate({scrollTop: $(".bg_" + idx).offset().top}, 1500);
+                        return;
+                    }
+                    if(wheel > 0) {
+                    // 스크롤 올라감 
+
+                        $("html").animate({scrollTop: $(".bg_0").offset().top}, 100);
+                        return;
+                    }
+
+                }
+                if( $("body").attr("data-screen") == 1 ) {
+
+                    if(wheel < 0 && $(window).scrollTop() == $(".bg_1").offset().top) {
+                    // 스크롤 내려감 
+
+                        idx = 2;
+                        $("body").attr("data-screen", idx);
+                        $("html").animate({scrollTop: $(".bg_" + idx).offset().top}, 1500);
+                        return;
+                    }
+                    if(wheel > 0 && $(window).scrollTop() == $(".bg_1").offset().top) {
+                    // 스크롤 올라감 
+                        idx = 0;
+                        $("body").attr("data-screen", idx);
+                        $("html").animate({scrollTop: $(".bg_" + idx).offset().top}, 1500);
+                        return;
+                    }
+
+                }
+                if( $("body").attr("data-screen") == 2 ) {
+
+                    if(wheel < 0) {
+                    // 스크롤 내려감 
+
+                        $("html").animate({scrollTop: $(".bg_2").offset().top}, 100);
+                        return;
+                    }
+                    if(wheel > 0) {
+                    // 스크롤 올라감 
+                        idx = 1;
+                        $("body").attr("data-screen", idx);
+                        $("html").animate({scrollTop: $(".bg_" + idx).offset().top}, 1500);
+                        return;
+                    }
+
+                }
+            });
+          
+        </script>
+    </body>
+</html>
